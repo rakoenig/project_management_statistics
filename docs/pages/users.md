@@ -45,7 +45,7 @@ and <MAX_REQUESTS_PER_MIN> with the maximum number of requests per minute allowe
 Now create the container with name `pms`
 
 ```bash
-sudo podman -t pms .
+sudo podman build -t pms .
 ```
 
 2. Execute the following command, replacing <project_name> and <sqlite_file> with appropriate values:
