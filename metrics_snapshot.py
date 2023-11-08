@@ -1,6 +1,6 @@
 import sys
 import argparse
-from datetime import date
+from datetime import datetime
 from db.sqlite_query import SQLiteQuery
 from metrics.metrics_status_count import MetricsStatusCount
 from metrics.column_transformer import ColumnTransformer
@@ -37,7 +37,7 @@ if args['metric'] != 'status_count':
     print(f"Metric '{args['metric']}' is not implemented.", file=sys.stderr)
     sys.exit(1)
 
-date_to = parse_date(args['date'], date.today())
+date_to = parse_date(args['date'], datetime.now())
 Formatter = parse_formatter(args['output_format'])
 
 # prepare the filters

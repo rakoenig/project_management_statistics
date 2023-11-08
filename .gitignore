@@ -208,6 +208,8 @@ bsc/config.py
 notes.txt
 workdir/
 redmine.yaml
+*.db
+*token*
 
 #docs
 docs/demo/data

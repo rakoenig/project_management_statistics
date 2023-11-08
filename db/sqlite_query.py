@@ -70,7 +70,7 @@ class SQLiteQuery:
                 if state is not None:
                     issue["status"] = state.old_value
                 else:
-                    if issue["closed_on"] is not None and date < issue["closed_on"].date():
+                    if issue["closed_on"] is not None and date < issue["closed_on"]:
                         issue["status"] = "New"
 
         return issues_dict
